@@ -62,7 +62,7 @@ export async function seqtaFetch(input: string, init?: SeqtaRequestInit): Promis
   const useMock = await getDevSensitiveInfoHider();
   
   if (useMock) {
-    return mockApiResponse(input);
+    return mockApiResponse(input, init);
   }
   
   try {
